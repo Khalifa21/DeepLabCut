@@ -28,6 +28,8 @@ import tensorflow as tf
 from deeplabcut.utils import auxiliaryfunctions
 from skimage.util import img_as_ubyte
 import scipy
+import matplotlib.pyplot as plt
+
 
 ####################################################
 # Loading data, and defining model folder
