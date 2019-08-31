@@ -18,7 +18,7 @@ from deeplabcut.image_version.predict_images import analyze_images
 task = 'test_project3'
 experimenter = 'Mohamed' ## put your name here
 images_dir = ['/Users/mohamed/cv_images_train'] ## images used for training and validation
-predict_dir = '/Users/mohamed/cv_images_train' ## images used for prediction
+predict_dir = '/Users/mohamed/cv_images_test' ## images used for prediction
 
 # This step is to create the project directories and the config file that is used for the whole project.
 # Don't forget to change config file data for your project.

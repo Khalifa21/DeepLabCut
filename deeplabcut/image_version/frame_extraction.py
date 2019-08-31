@@ -85,6 +85,6 @@ def extract_frames(config, max_input_size=None):
             dataFrame.to_hdf(hd5_file, key='df_with_missing', mode='w')
             dataFrame.to_csv(csv_file)
             pass
-    print("\nFrames were selected.\nYou can now label the frames using the function 'label_frames' (if you extracted enough frames for all videos).")
+    print("\nFrames were selected.\nYou can now label the frames using the function 'label_frames'.")
 
 

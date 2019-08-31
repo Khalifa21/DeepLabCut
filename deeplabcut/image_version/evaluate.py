@@ -16,6 +16,8 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 from pathlib import Path
+import copy
+import json
 
 def pairwisedistances(DataCombined,scorer1,scorer2,pcutoff=-1,bodyparts=None):
     ''' Calculates the pairwise Euclidean distance metric over body parts vs. images'''
@@ -304,7 +306,7 @@ def evaluate_network(config,Shuffles=[1],plotting = None,show_errors = True,comp
                 file.write(json.dumps(result_dicts, indent=4))
             print("The network is evaluated and the results are stored in the subdirectory 'evaluation_results'.")
             print(
-                "If it generalizes well, choose the best model for prediction and update the config file with the appropriate index for the 'snapshotindex'.\nUse the function 'analyze_video' to make predictions on new videos.")
+                "If it generalizes well, choose the best model for prediction and update the config file with the appropriate index for the 'snapshotindex'.\nUse the function 'analyze_images' to make predictions on new images.")
             print("Otherwise consider retraining the network (see DeepLabCut workflow Fig 2)")
 
     # returning to intial folder

@@ -216,12 +216,12 @@ def analyze_images(config, directory, image_type='.png', shuffle=1, trainingseti
             [fn.split('.')[0] for fn in os.listdir(os.path.join(modelfolder, 'train')) if "index" in fn])
     except FileNotFoundError:
         raise FileNotFoundError(
-            "Snapshots not found! It seems the dataset for shuffle %s has not been trained/does not exist.\n Please train it before using it to analyze videos.\n Use the function 'train_network' to train the network for shuffle %s." % (
+            "Snapshots not found! It seems the dataset for shuffle %s has not been trained/does not exist.\n Please train it before using it to analyze images.\n Use the function 'train_network' to train the network for shuffle %s." % (
             shuffle, shuffle))
 
     if cfg['snapshotindex'] == 'all':
         print(
-            "Snapshotindex is set to 'all' in the config.yaml file. Running video analysis with all snapshots is very costly! Use the function 'evaluate_network' to choose the best the snapshot. For now, changing snapshot index to -1!")
+            "Snapshotindex is set to 'all' in the config.yaml file. Running images analysis with all snapshots is very costly! Use the function 'evaluate_network' to choose the best the snapshot. For now, changing snapshot index to -1!")
         snapshotindex = -1
     else:
         snapshotindex = cfg['snapshotindex']
